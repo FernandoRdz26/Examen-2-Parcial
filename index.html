@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recibo telefonico</title>
     <style>
-        body{background:rgb(137, 229, 137);}
+        body{background:rgb(137, 229, 137); margin: 0 auto;}
         form{border: 2px solid black; width: fit-content; margin: 0 auto;}
         h1{text-align: center; text-shadow: -3px 4px 4px blue;}
         hr{height: 1px;}
@@ -16,6 +16,11 @@
         input:hover{transform: scale(1.1);}
         select:hover{transform: scale(1.1);}
     </style>
+
+    <script>
+        alert('Hola mundo');
+    </script>
+
 </head>
 <body>
     <hr color="black">
@@ -28,24 +33,24 @@
         <hr color="black">
         <label for="plan">Tipo de plan:</label>
         <br>
-        <label for="telefono">Solo telefono (200.00)</label><input type="radio" name="plan" id="plan">
+        <label for="telefono">Solo telefono (200.00)</label><input type="radio" name="plan" id="plan" value="telefono">
         <br>
-        <label for="tel_inter">Telefono + internet (450.00)</label> <input type="radio" name="plan" id="plan">
+        <label for="tel_inter">Telefono + internet (450.00)</label> <input type="radio" name="plan" id="plan" value="telefono_internet">
         <br>
         <label for="tel_inter_tv">Telefono + internet + TV (850.00)</label>
-        <input type="radio" name="plan" id="plan">
+        <input type="radio" name="plan" id="plan" value="telefono_internet_tv">
         <br>
         <hr color="black">
         <label for="servicios">Otros servicios:</label>
         <br>
         <label for="antivirus">Antivirus (30.00)</label>
-        <input type="checkbox" name="servicios" id="servicios">
+        <input type="checkbox" name="servicios" id="servicios" value="antivirus">
         <br>
         <label for="nube">Servicio de nube (50.00)</label>
-        <input type="checkbox" name="servicios" id="servicios">
+        <input type="checkbox" name="servicios" id="servicios" value="nube">
         <br>
         <label for="web">Servicios web (40.00)</label>
-        <input type="checkbox" name="servicios" id="servicios">
+        <input type="checkbox" name="servicios" id="servicios" value="web">
         <br>
         <hr color="black">
         <label for="paquetes">Paquetes:</label>
@@ -59,8 +64,14 @@
         </select>
         <br>
         <hr>
-        <input type="submit" value="calcular recibo" style="margin-bottom: 8px;">
+        <input type="submit" value="calcular recibo" style="margin-bottom: 8px;" 
+            onclick="alert('Esto esta pagado')">
     </form>
     
+    <script>
+        console.log('Hola desde la consola del desarrollador');
+    </script>
+
+    <script src="java.js"></script>
 </body>
 </html>
